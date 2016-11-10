@@ -1,43 +1,41 @@
 #Lab4. DeadLock
 
-###Ò»¡¢ËÀËø½á¹û½ØÍ¼
-***
-<div align=center>
-![](http://upload-images.jianshu.io/upload_images/3398279-9517abeec2a8762b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
-
-
-###¶ş¡¢²úÉúËÀËøµÄËÄ¸ö±ØÒªÌõ¼ş
+###ä¸€ã€æ­»é”ç»“æœæˆªå›¾
 ***
 
-- »¥³â£ºÍ¬Ò»Ê±¿Ì£¬Ä³¸ö×ÊÔ´Ö»ÄÜ±»Ò»¸ö½ø³Ì·ÃÎÊ
-- Õ¼ÓĞ²¢µÈ´ı£ºÒ»¸ö½ø³Ì±ØĞëÖÁÉÙÕ¼ÓĞÒ»¸ö×ÊÔ´£¬²¢ÇÒµÈ´ıÁíÒ»¸ö×ÊÔ´£¬¶ø¸Ã×ÊÔ´ÎªÆäËû½ø³ÌËùÕ¼ÓĞ
-- ·ÇÇÀÕ¼£º×ÊÔ´²»ÄÜ±»ÇÀÕ¼£¬¼´×ÊÔ´Ö»ÄÜÔÚ½ø³ÌÍê³ÉÈÎÎñºó×Ô¶¯ÊÍ·Å
-- Ñ­»·µÈ´ı£ºÓĞÒ»×éµÈ´ı½ø³Ì{p1,p2,p3,...,pn}£¬p1µÈ´ıµÄ×ÊÔ´±»p2Õ¼ÓĞ£¬p2µÈ´ıµÄ×ÊÔ´±»p3Õ¼ÓĞ£¬p3µÈ´ıµÄ×ÊÔ´±»p4Õ¼ÓĞ£¬...£¬pnµÈ´ıµÄ×ÊÔ´±»p1Õ¼ÓĞ£¬ĞÎ³ÉÒ»ÖÖ»·×°µÄ½á¹¹
+ Â ![](http://upload-images.jianshu.io/upload_images/3398279-9517abeec2a8762b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###Èı¡¢±¾ÊµÑéµÄËÀËø²úÉúµÄ½âÊÍ
+
+###äºŒã€äº§ç”Ÿæ­»é”çš„å››ä¸ªå¿…è¦æ¡ä»¶
 ***
 
-- µ÷ÓÃdeallock.javaÊ±£¬´´½¨ÁËÁ½¸ö×ÊÔ´aºÍb
-  µ±t.start();¿ªÊ¼ÔËĞĞµÄÊ±ºò£¬Ïß³Ìt¿ªÊ¼±»µ÷¶È
-  ´ËÊ±while();»áÔËĞĞ£¬Í¬Ê±run();Ò²»áÔËĞĞ£»
+- äº’æ–¥ï¼šåŒä¸€æ—¶åˆ»ï¼ŒæŸä¸ªèµ„æºåªèƒ½è¢«ä¸€ä¸ªè¿›ç¨‹è®¿é—®
+- å æœ‰å¹¶ç­‰å¾…ï¼šä¸€ä¸ªè¿›ç¨‹å¿…é¡»è‡³å°‘å æœ‰ä¸€ä¸ªèµ„æºï¼Œå¹¶ä¸”ç­‰å¾…å¦ä¸€ä¸ªèµ„æºï¼Œè€Œè¯¥èµ„æºä¸ºå…¶ä»–è¿›ç¨‹æ‰€å æœ‰
+- éæŠ¢å ï¼šèµ„æºä¸èƒ½è¢«æŠ¢å ï¼Œå³èµ„æºåªèƒ½åœ¨è¿›ç¨‹å®Œæˆä»»åŠ¡åè‡ªåŠ¨é‡Šæ”¾
+- å¾ªç¯ç­‰å¾…ï¼šæœ‰ä¸€ç»„ç­‰å¾…è¿›ç¨‹{p1,p2,p3,...,pn}ï¼Œp1ç­‰å¾…çš„èµ„æºè¢«p2å æœ‰ï¼Œp2ç­‰å¾…çš„èµ„æºè¢«p3å æœ‰ï¼Œp3ç­‰å¾…çš„èµ„æºè¢«p4å æœ‰ï¼Œ...ï¼Œpnç­‰å¾…çš„èµ„æºè¢«p1å æœ‰ï¼Œå½¢æˆä¸€ç§ç¯è£…çš„ç»“æ„
 
-<div align=center>
-![](http://upload-images.jianshu.io/upload_images/3398279-030643972f7036ec.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
+###ä¸‰ã€æœ¬å®éªŒçš„æ­»é”äº§ç”Ÿçš„è§£é‡Š
+***
 
+- è°ƒç”¨deallock.javaæ—¶ï¼Œåˆ›å»ºäº†ä¸¤ä¸ªèµ„æºaå’Œb
+  å½“t.start();å¼€å§‹è¿è¡Œçš„æ—¶å€™ï¼Œçº¿ç¨‹tå¼€å§‹è¢«è°ƒåº¦
+  æ­¤æ—¶while();ä¼šè¿è¡Œï¼ŒåŒæ—¶run();ä¹Ÿä¼šè¿è¡Œï¼›
 
-- b.last()ÊÇÒ»¸ösynchronizedÍ¬²½´úÂë¿é£¬µ±Deadlock()ÔÚ·ÃÎÊÕâ²¿·Ö´úÂë¿éµÄÊ±ºò,Í¬ÎªsynchronizedÍ¬²½´úÂë¿éµÄa.last()µÄ·ÃÎÊ½«±»×èÈû
-
-<div align=center>
-![](http://upload-images.jianshu.io/upload_images/3398279-2e17043db45bc67e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
-
-- 
-¶øÔÚ¹¹Ôìº¯ÊıÄÚµÄa.method(b)ÓĞµ÷ÓÃb.last()£¬µ±ËûÏÈÉêÇëµÃµ½b.last()Õâ²¿·Ö×ÊÔ´µÄÊ±ºò£¬run()Èç¹ûÔÙÈ¥ÉêÇëa.last()¾Í»á±»×èÈû£¬Ö»ÓĞµÈb.last()ÍêÈ«±»ÊÍ·Å£¬run()²Å»á´Ó×èÈûµÄ×´Ì¬±äÎª±»»½ĞÑ£¬²ÅÄÜÈ¥ÉêÇë×ÊÔ´a.last()
+  ![](http://upload-images.jianshu.io/upload_images/3398279-030643972f7036ec.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-<div align=center>
-![](http://upload-images.jianshu.io/upload_images/3398279-c51f6d11964d8621.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
+- b.last()æ˜¯ä¸€ä¸ªsynchronizedåŒæ­¥ä»£ç å—ï¼Œå½“Deadlock()åœ¨è®¿é—®è¿™éƒ¨åˆ†ä»£ç å—çš„æ—¶å€™,åŒä¸ºsynchronizedåŒæ­¥ä»£ç å—çš„a.last()çš„è®¿é—®å°†è¢«é˜»å¡
 
-<div align=center>
-![](http://upload-images.jianshu.io/upload_images/3398279-8dbc4ca1e114c050.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
 
-- µ±runÔÚÔËĞĞb.method(a)µÄÊ±ºò£¬Èç¹û¹¹Ôìº¯ÊıÍ¬Ê±Ò²ÅÜµ½ÁËa.method(b)Õâ²¿·Ö´úÂë¿é£¬Á½¸öÏß³ÌÍ¬Ê±È¥ÉêÇëÊôÓÚsynchronizedµÄÍ¬²½´úÂë¿éDeadlock£¨£©ÉêÇëb.last()£¬run()ÉêÇëa.last()£¬synchronizedÀàĞÍµÄ×ÊÔ´Í¬Ò»Ê±¼äÖ»ÄÜ±»Ò»¸ö½ø³Ì·ÃÎÊ£¬Ë«·½½©³Ö×Å£¬»¥Ïà²»ÈÃ²½£¬¾Í»á²úÉúËÀËø
+  ![](http://upload-images.jianshu.io/upload_images/3398279-2e17043db45bc67e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- è€Œåœ¨æ„é€ å‡½æ•°å†…çš„a.method(b)æœ‰è°ƒç”¨b.last()ï¼Œå½“ä»–å…ˆç”³è¯·å¾—åˆ°b.last()è¿™éƒ¨åˆ†èµ„æºçš„æ—¶å€™ï¼Œrun()å¦‚æœå†å»ç”³è¯·a.last()å°±ä¼šè¢«é˜»å¡ï¼Œåªæœ‰ç­‰b.last()å®Œå…¨è¢«é‡Šæ”¾ï¼Œrun()æ‰ä¼šä»é˜»å¡çš„çŠ¶æ€å˜ä¸ºè¢«å”¤é†’ï¼Œæ‰èƒ½å»ç”³è¯·èµ„æºa.last()
+
+
+
+  ![](http://upload-images.jianshu.io/upload_images/3398279-c51f6d11964d8621.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+  ![](http://upload-images.jianshu.io/upload_images/3398279-8dbc4ca1e114c050.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- å½“runåœ¨è¿è¡Œb.method(a)çš„æ—¶å€™ï¼Œå¦‚æœæ„é€ å‡½æ•°åŒæ—¶ä¹Ÿè·‘åˆ°äº†a.method(b)è¿™éƒ¨åˆ†ä»£ç å—ï¼Œä¸¤ä¸ªçº¿ç¨‹åŒæ—¶å»ç”³è¯·å±äºsynchronizedçš„åŒæ­¥ä»£ç å—Deadlockï¼ˆï¼‰ç”³è¯·b.last()ï¼Œrun()ç”³è¯·a.last()ï¼Œsynchronizedç±»å‹çš„èµ„æºåŒä¸€æ—¶é—´åªèƒ½è¢«ä¸€ä¸ªè¿›ç¨‹è®¿é—®ï¼ŒåŒæ–¹åƒµæŒç€ï¼Œäº’ç›¸ä¸è®©æ­¥ï¼Œå°±ä¼šäº§ç”Ÿæ­»é”
